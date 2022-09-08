@@ -1,0 +1,22 @@
+h1{
+    color: green;
+    text-align: center;
+    font-size: 50px;
+    text-decoration:underline;
+    text-decoration-color: red;
+
+}
+.paraone {
+    color: blueviolet;
+    border: 1px dotted black;
+    font-size: 30px;
+}
+.paratwo {
+    color: olive;
+    font-size: 20px;
+}
+ol {
+    color: darkblue;
+    background-color: yellow;
+    width: 100px;
+}

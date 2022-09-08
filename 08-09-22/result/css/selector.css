@@ -1,0 +1,12 @@
+.grand-parent .parent-1 .p1-child-1 .child-1-head1{
+    color:red;
+}
+.grand-parent .parent-1 .p1-child-1 .child-1-head2{
+    color:blue;
+}
+.grand-parent .parent-1 .p1-child-2 .child-2-head1{
+    color:blueviolet;
+}
+.grand-parent .parent-1 .p1-child-2 .child-2-head2{
+    color:aquamarine;
+}
