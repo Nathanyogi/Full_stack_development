@@ -1,0 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    position: sticky;
+    left: 0;
+    top:0;
+}

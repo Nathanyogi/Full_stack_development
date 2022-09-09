@@ -1,0 +1,14 @@
+h1{
+    border: 2px solid black;
+    display: inline;
+}
+a{
+    border: 2px solid black;
+    display: inline-block;
+}
+
+li{
+    border: 1px solid red;
+    display:inline-block;
+    padding:20px;
+}
