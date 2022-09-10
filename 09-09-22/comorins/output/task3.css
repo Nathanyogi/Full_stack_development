@@ -1,0 +1,23 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.row-1 .first-row{
+    height: 200px;
+    width:200px;
+    border: 1px solid blue;
+    float: left;
+    margin-left: 25px;  
+}
+.row-2 .second-row{
+    height: 200px;
+    width:200px;
+    border: 1px solid blue;
+    float: left;
+    margin-left: 25px;
+}
+.row-2{
+    float:left;
+    margin-top: 20px;
+}
