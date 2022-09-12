@@ -33,9 +33,10 @@
     height: 160px;
     width: 160px;
     position: absolute;
-    right:0;
-    bottom: 0;
-    background-color: skyblue;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color:green;
 }
 .child-4{
     border: 1px solid slategray;
@@ -50,6 +51,8 @@
     border: 1px solid slategray;
     height: 160px;
     width: 160px;
-    margin:219px;
-    background-color:green;
+    position: absolute;
+    right:0;
+    bottom: 0;
+    background-color: skyblue;
 }

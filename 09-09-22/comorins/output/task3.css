@@ -5,19 +5,9 @@
 
 .row-1 .first-row{
     height: 200px;
-    width:200px;
+    width: 32%;
     border: 1px solid blue;
-    float: left;
-    margin-left: 25px;  
-}
-.row-2 .second-row{
-    height: 200px;
-    width:200px;
-    border: 1px solid blue;
-    float: left;
-    margin-left: 25px;
-}
-.row-2{
-    float:left;
+    display: inline-block;
     margin-top: 20px;
+    margin-left: 10px
 }
