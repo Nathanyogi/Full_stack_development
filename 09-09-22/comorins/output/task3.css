@@ -3,7 +3,7 @@
     padding: 0%;
 }
 
-.row-1 .first-row{
+.parent .block{
     height: 200px;
     width: 32%;
     border: 1px solid blue;
