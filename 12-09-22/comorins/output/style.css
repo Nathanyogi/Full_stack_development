@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*index page style ends here */
+.nav-bar{
+    width: 100%;
+    background-color: #333;
+    padding:20px 0;
+    position: sticky;
+    top:0;
+    left: 0;
+}
+.nav-bar .menu{
+    text-align: center;
+}
+.nav-bar .menu .list-item{
+    display: inline;
+    margin-left: 20px;
+
+}
+.nav-bar .menu .list-item a{
+    color: #fff;
+    text-decoration: none;
+}
+.body{
+    margin-top: 35px;
+}
+/*index page style ends here */
+/*form page style starts here */
+form{
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.bottom-color{
+    border:none;
+    border: 1px solid #ced4da;
+    border-bottom: 2px solid peru;
+    width: 50%;
+    height: 30px;
+}
+button{
+    background-color: peru;
+    border-radius: 4px;
+    border: 2px solid peru;
+    padding: 4px;
+    color:#fff; 
+    margin-left: 58%;
+}
+form .label{
+    width: 15%;
+    display: inline-block;
+}
+/*form page style starts here */
+
+/*display style starts here */
+.list .list-div .list-align{
+    margin-left: 20px;
+}
+.list-div{
+    width:30%;
+    background-color: yellow;
+    display: inline-block;
+    margin-top: 50px;
+}
+.list .list-div .head-color{
+    color: brown;
+}
+/*display style ends here */
+
+/* ifame style start here */
+iframe{
+    margin-top: 50px;
+}
+/* ifame style ends here */

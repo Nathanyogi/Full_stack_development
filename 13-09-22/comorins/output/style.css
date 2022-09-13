@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    padding: 2%;
+    background-color: black;
+}
+h1{
+    text-align: center;
+    color: aliceblue;
+}
+nav{
+    margin-top:5px;
+    padding: 1%;
+    background-color: gray;
+}
+section{
+    margin-top:5px;
+    padding-top: 12%;
+    padding-bottom: 17%;
+    background-color: silver;
+}
+footer{
+    margin-top:5px;
+    padding: 1%;
+    background-color: brown;
+}
