@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    padding: 2%;
+    background-color: #333;
+}
+/* nav style starts here */
+nav{
+    background-color: gray;
+    margin-top: 5px;
+    padding: 1%;
+}
+/* nav style ends here */
+/* section style starts here */
+section{
+    background-color:lightgrey;
+    padding: 20px 5px 58px 5px;
+    margin-top: 5px;
+}
+section .slideshow{
+    background-color:#333;
+    padding: 40px 0 70px 0;
+}
+.grid{
+    margin-top: 58px;
+}
+.column{
+    width: 30%;
+    background-color: #fff;
+    height: 200px;
+    display: inline-block;
+}
+.left{
+    margin-left: 58px;
+}
+/* section style starts here */
+/* footer style starts here */
+footer{
+    background-color: #333;
+    padding: 1%;
+    margin-top: 5px;
+}
+/* footer style starts here */
+.text{
+    text-align: center;
+    color: #fff;
+}

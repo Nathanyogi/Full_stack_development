@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* header style starts here */
+header{
+    background-color: #333;
+    padding: 20px;
+}
+/* headre style ends here */
+/* nav style starts here */
+nav{
+    background-color:grey;
+    padding: 10px;
+}
+/* nav style ends here */
+/* section style starts here */
+section{
+    padding: 20px 100px;
+}
+.main{
+    padding: 100px 306px 300px;
+    background-color:grey;
+    display: inline-block;
+}
+.slide{
+    padding: 100px 100px 300px;
+    background-color: darkgray;
+    display: inline-block;
+    margin-left:15px;
+    vertical-align: top;
+}
+/* section style ends here */
+/* footer style starts here */
+footer{
+    background-color:#333;
+    padding: 10px;
+}
+/* footer style ends here */
+.text{
+    text-align: center;
+    color:#fff;
+}
