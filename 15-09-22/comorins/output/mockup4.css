@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* common for all */
+a{
+    text-decoration: none;
+    color: black;
+}
+/* banner style starts here */
+.banner{
+    background-color:gray;
+    padding:20px 90px;
+    
+}
+/* banner style ends here */
+/* Header section starts here */
+header{
+    padding: 10px 0px;
+}
+h3{
+    display: inline-block;
+}
+.header-list{
+    display:inline-block;
+    float: right;
+}
+.header-list .menu{
+    display: inline-block;
+    margin-left: 20px;
+
+}
+.home-intro {
+    margin-top: 20px;
+    width:100%;
+}
+.intro{
+    width:40%;
+    display: inline-block;
+    vertical-align: top;
+}
+.feature {
+    padding: 100px 430px 100px 100px;
+    display: inline-block;
+    background-color: darkgrey;
+}
+/* header section ends here */
+/* section div style starts here */
+section{
+    width:70%;
+    margin: 40px auto 30px;
+
+}
+.section1{
+    width:33%;
+    background-color: gray; 
+    display: inline-block;
+}
+.section2{
+    margin-top: 20px;
+}
+h4{
+    margin: 100px 120px;
+}
+.section3{
+    background: gray;
+    margin-top: 20px;
+    padding: 20px;
+}
+/* section div style ends here */
+/* Footer div style starts here */
+footer{
+    background-color: gray;
+    padding: 20px 90px;
+}
+.footer-list{
+    display: inline-block;
+}
+.footer-menu{
+    display: inline-block;
+    margin-right: 20px;
+}
+.footer-text{
+    display: inline-block;
+    float: right;
+}
+/* Footer div style starts here */

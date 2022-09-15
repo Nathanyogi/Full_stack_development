@@ -1,0 +1,106 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    background-color: darkgray;
+    padding: 12px;
+}
+/* header style starts here */
+header{
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+}
+header h5{
+    margin-top: 20px;
+}
+/* header style ends here */
+/* nav style starts here */
+nav{
+    background-color: #333;
+    padding: 10px;
+}
+ul{
+    display: inline-block;
+    width: 100%;
+}
+li{
+    display: inline-block;
+}
+.link-left{
+    margin-left: 30px;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+li:last-child{
+    float:right;
+}
+/* nav style starts here */
+/* section style starts here */
+section{
+    margin-top: 12px;
+}
+/* content style starts here */
+.content{
+    width: 74%;
+    background-color: darkgray;
+    display: inline-block;
+}
+.content-section {
+    padding: 40px 20px 30px;
+    background-color: #fff;
+}
+.section-img {
+    background-color: gray;
+    padding: 10px 10px 130px;
+}
+
+.content-section2{
+    margin-top: 12px;
+    padding: 40px 20px 30px;
+    background-color: #fff;
+}
+/* content style ends here */
+/* slideshoe style ends here */
+.slideshow{
+    display:inline-block;
+    width:25%;
+    margin-left: 8px;
+    vertical-align: top;
+}
+.slide-1{
+    background-color: #fff;
+    padding: 40px 20px 30px;
+}
+.slide-img1 {
+    background-color: gray;
+    padding: 15px 15px 100px;
+}
+.slide-2{
+    margin-top: 12px;
+    background-color: #fff;
+    padding: 40px 20px 30px;
+}
+.slide-2-img-txt{
+    display: block;
+    margin-top: 60px;
+}
+.slide-img2{
+    background-color: gray;
+    padding: 15px 15px 15px;
+}
+.slide-3{
+    background-color: #fff;
+    padding:20px;
+    margin-top: 12px;
+}
+/* Footer style starts here */
+footer{
+    padding: 30px;
+    text-align: center;
+    background-color: lightgray;
+    margin-top: 12px;
+}
