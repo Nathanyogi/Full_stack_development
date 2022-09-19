@@ -1,0 +1,35 @@
+@media(max-width: 1200px) {
+    div{
+        width: 24%;
+        display: inline-block;
+        background: green;
+    }
+}
+@media(max-width: 991px) {
+    body {
+      background-color: lightcoral;
+    }
+    div{
+        margin-top: 20px;
+        width: 49%;
+        background: blueviolet;
+    }
+}
+@media(max-width: 767px) {
+    body {
+      background-color: lightgreen;
+    }
+    div{
+        margin-top: 20px;
+        width: 99%;
+        background:red;
+    }
+}
+@media(max-width: 575px) {
+    body {
+      background-color: lightpink;
+    }
+    div{
+        background: yellow;
+    }
+}

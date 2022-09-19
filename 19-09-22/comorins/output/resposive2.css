@@ -1,0 +1,38 @@
+body{
+    background-color: lightskyblue;
+}
+h1{
+    background-color: black;
+}
+@media(min-width:575px){
+    body{
+        background-color: lightcoral;
+    }
+    h1{
+        background-color: blue;
+    }
+}
+@media(min-width:767px){
+    body{
+        background-color: lawngreen;
+    }
+    h1{
+        background-color: red;
+    }
+}
+@media(min-width:991px){
+    body{
+        background-color: lightslategray;
+    }
+    h1{
+        background-color: yellow;
+    }
+}
+@media(min-width:1200px){
+    body{
+        background-color: lightcyan;
+    }
+    h1{
+        background-color: green;
+    }
+}

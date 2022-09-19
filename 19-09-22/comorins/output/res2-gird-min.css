@@ -1,0 +1,28 @@
+@media(min-width:575px){
+    .child2{
+        background-color: red;
+        height: 30px;
+    }
+}
+@media(min-width:767px){
+    .child2{
+        background-color: red;
+        width: 49%;
+        height: 30px;
+        display: inline-block;
+    }
+}
+@media(min-width:991px){
+    .child2{
+        background-color: red;
+        width: 30%;
+        height: 30px;
+    }
+}
+@media(min-width:1200px){
+    .child2{
+        background-color: red;
+        width: 24%;
+        height: 30px;
+    }
+}
