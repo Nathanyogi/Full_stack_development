@@ -1,0 +1,22 @@
+body{
+    margin: 10px;
+    background-color: gray;
+}
+.header{
+    padding: 10px;
+}
+.img1{
+    width: 100%;
+}
+.box-border{
+    border-radius: 0;
+}
+.img2{
+    width: 100%;
+    height: 140px;
+}
+footer{
+    margin-top: 10px;
+    background-color: lightgrey;
+    padding: 10px 0;
+}

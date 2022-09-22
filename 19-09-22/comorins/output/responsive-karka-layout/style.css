@@ -254,6 +254,7 @@
         width: 30%;
         display: inline-block;
         vertical-align: top;
+        margin-left: 7px;
     }
     .right-section1-content img{
         height: 200px;

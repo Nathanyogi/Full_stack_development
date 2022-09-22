@@ -1,0 +1,28 @@
+header{
+    background-color: black;
+    color:white
+}
+.header{
+    padding: 10px 0;
+}
+nav{
+    background-color: gray;
+    padding:5px;
+}
+section{
+    margin:10px 0;
+}
+.left{
+    background-color: lightgray;
+    margin-right: 20px;
+    padding:248px 0;
+}
+.right{
+    background-color: darkgrey;
+    padding:248px 0;
+}
+footer{
+    background-color: #333;
+    color:white;
+    padding: 10px;
+}

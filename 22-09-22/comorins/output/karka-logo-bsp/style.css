@@ -1,0 +1,50 @@
+body{
+    font-family: 'Roboto';
+    font-style: normal;
+}
+.nav-menu{
+    margin-left: 54px;
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 32px;
+    color: #FFFEFE;
+}
+.nav-right-text{
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;
+    color: #000000 !important;
+}
+section{
+    overflow: hidden;
+}
+section .section1{
+    margin-top: 72px;
+}
+section .section1 h5{
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 45px;
+    color: #343434 !important;
+}
+.section1-img{
+    border: 1px solid #6F6C6C;
+    padding:16px 12px;
+}
+.section1-p{
+    font-weight: 300;
+    font-size: 23px;
+    line-height: 153.19%;
+    color: #000000;
+}
+.section1-a{
+    font-weight: 400;
+    font-size: 29px;
+    line-height: 153.19%;
+    color: #6D9D34;
+}
+.section2 .img1{
+    width: 23%;
+    float: left;
+    margin-left: 50px;
+}
