@@ -1,0 +1,134 @@
+@media(min-width:1200px){
+    body{
+        background-color: #FFFFFF;
+        font-family: 'Poppins';
+        font-style: normal;
+    }
+    button{
+        background: #EB5757 !important;
+    }
+    header nav ul  li{
+        margin-right: 44px;
+    }
+    header nav ul  li a{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+        color: #333333;
+    }
+    header nav ul  li a:active{
+        color: #EB5757 !important;
+    }
+    .banner{
+        margin-top: 89px;
+        background-image: url("../img/eating-lady.png");
+        background-repeat: no-repeat;
+        background-position: right;
+        padding: 244px 0 83px;
+    }
+    .banner-content{
+        max-width: 50%;
+    }
+    .banner p{
+        font-weight: 700;
+        font-size: 72px;
+        line-height: 90px;
+        color: #333333;
+    }
+    .banner p label{
+        color:#EB5757;
+    }
+    .banner-button{
+        margin-top: 115px;
+    }
+    /* section style starts here */
+    section{
+        margin-top: 93px;
+    }
+    .section1 .red-p{
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.16em;
+        color: #EB5757;
+    }
+    .section1 .black-p{
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 60px;
+        color: #333333;
+    }
+    .section1 .principle h3{
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 70px;
+        color: #000000;
+    }
+    .section1 .principle p{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 30px;
+        color: #333333;
+    }
+    .margin-top-30{
+        margin-top: 30px;
+    }
+    /* section2 style starts here */
+    .section2{
+        margin-top: 145px;
+    }
+    .margin-top-165{
+        margin-top: 165px;
+    }
+    /* section2 style ends here */
+    /* footer style starts here */
+    footer{
+        margin-top: 229px;
+        margin-bottom: 154px;
+    }
+    footer .row .col1-p{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 30px;
+        color: #333333;
+    }
+    .column-count-2{
+        column-count: 2;
+        list-style: none;
+
+    }
+    .footer-heading{
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 22px;
+        color: #000000;
+    }
+    .column-count-2 li a{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 30px;
+        color: #333333;
+    }
+    .col3{
+        display: flex;
+    }
+    .col3-contents{
+        margin: 0 auto;
+    }
+    footer .col3-p{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 30px;
+        color: #333333;
+    }
+    .email-box{
+        border: 1px solid #BDBDBD;
+        border-radius: 60px;
+        display: inline-block;
+        padding: 14px 20px;
+    }
+    .text{
+        margin-bottom: 0px;
+    }
+    /* footer style ends here */
+}
