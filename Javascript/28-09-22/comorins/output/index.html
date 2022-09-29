@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+</head>
+<body>
+    <script>
+        let my_resume={
+            name:"Nathan",
+            age: 22,
+            education:[
+                {
+                    qualification:"HSC",
+                    institute:"Boothapandy Govt school",
+                    passed_out:2018,
+                    mark:84,
+                },
+                {
+                    qualification:"B.E",
+                    institute:"CAPE",
+                    passed_out:2022,
+                    department:"CSE",
+                    mark:89,
+                }
+            ],
+            computer_literacy:["HTML","PYTHON","CSS"],
+            hobbies:["playing cricket","cooking","spending time with pet"],
+            place:"Derisanamcope",
+            skills:["hardworking","adobtive","Innovative"],
+            Languanges:["Tamil","English"],
+            personal_details:{
+                email:"nathanm4122000@gmail.com",
+                phone_no:"6379498152",
+                Address:"2/15b, sounth street, Meladerisanamcope",
+                DOB:"04-12-2000",
+                marital_status:"single"
+            },
+            family_details:{
+                father_name:"P.Muthu krishnan",
+                siblings:"Elder_brother",
+            },
+            Gender:"male",
+            experience:"FullStackDeveloper Trainee at cmorins"
+        }
+        for(let i = 0; i<my_resume.education.length;i++){
+            console.log(my_resume.education[i].institute)
+        }
+
+        let total=0;
+        for(let i = 0;i<my_resume.education.length;i++){
+           mark= my_resume.education[i].mark;
+           total=total + mark
+        }
+        console.log(total / my_resume.education.length)
+
+        for(let j=0;j<my_resume.education.length;j++){
+            if(my_resume.education[j].department=="CSE"){
+                console.log(my_resume.education[j].passed_out)
+            }
+        }
+        // Ternary operrator 
+        let age=10;
+        let message = age<16 ? "you can/'t drive": "You can drive";
+        console.log(message)
+        // fuction
+        list_1=[1,2,3,4,5]
+        list_2=[10,11,12,13,14]
+        function add(a){
+            let total=0;
+            for(let i=0; i<a.length;i++){
+                total = total + a[i];
+            }
+            return total
+        }
+        let result = add(list_2)
+        console.log(result)
+    </script>
+</body>
+</html>    
