@@ -8,9 +8,24 @@
 </head>
 <body>
     <script>
-        function helloWorld(name){
-            
+        function helloWorld(language="eng"){
+            word = "Hello,World"
+            if (language == "eng"){
+                translate = word
+            }
+            else if(language == "tm"){
+                translate = "வணக்கம் ,உலகம்"
+            }
+            else if(language == "mlm"){
+                translate = "ഹലോ ,വേൾഡ്"
+            }
+            else{
+
+            }
+            return translate;
         }
+        console.log(helloWorld("mlm"))
+
     </script>
 </body>
 </html>

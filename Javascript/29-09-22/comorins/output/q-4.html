@@ -10,10 +10,9 @@
     <script>
         // program for change to pluralize form
         function pluralize(number,noun){
-            list = ["sheep","geese"]
-            let word;
-            for (let i =0; i<list.length ; i++){
-                if (noun != list[i]){
+            list = ["sheep","geese","monkey"]
+            let item = list.includes(noun)
+                if (item == false ){
                     if(number > 1){
                         console.log(number + " " + noun +"s");
                     }
@@ -26,11 +25,9 @@
                 }
                 else{
                     console.log(number + " " + noun);
-                    break;
                 }
             }
-        }
-        pluralize(1,"cat")
+        pluralize(4 ,"sheep")
 
     </script>
 </body>

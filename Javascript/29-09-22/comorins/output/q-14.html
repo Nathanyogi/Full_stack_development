@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-14</title>
+</head>
+<body>
+    
+    <script>
+        // javascript code for find the type of the triangle
+        function findTriangleType(side1,side2,side3){
+            let type;
+            if (side1==side2 && side1==side3){
+                type = "type of the triangle is equalateral"
+            }
+            else if((side1 == side2 || side1 == side3 || side2 == side3)){
+                type = "type of the triagle is Isosceles"
+            }
+            else{
+                type = "type of the triangle is Scalene"
+            }
+            return type
+        }
+        console.log(findTriangleType(2,2,4))
+    </script>
+</body>
+</html>
