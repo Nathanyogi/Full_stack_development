@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding:0;
+}
+body{
+    background: green;
+}
+.to-do-list{
+    width: 80%;
+    margin: 50px auto;
+    border-radius: 40px;
+}
+.form-button{
+    border-radius: 50px;
+}
+#empty-button{
+    background-color: brown;
+    color: #fff;
+}
