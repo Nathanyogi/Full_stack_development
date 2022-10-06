@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resume builder</title>
+</head>
+<body>
+    <label>Name</label>
+    <input type="text" onkeyup="addDetails('name',this.value)"/><br/>
+    <label>Email</label>
+    <input type="text" onkeyup="addDetails('email',this.value)"/><br/>
+    <label>Role</label>
+    <input type="text" onkeyup="addDetails('role',this.value)"/><br/>
+    <label>Phone</label>
+    <input type="text" onkeyup="addDetails('phone',this.value)"/><br/>
+    <label>Skills</label>
+    <input type="text" onkeyup="addDetails('skills',this.value,0)"/><br/>
+    <input type="text" onkeyup="addDetails('skills',this.value,1)"/><br/>
+    <input type="text" onkeyup="addDetails('skills',this.value,2)"/><br/>
+    <input type="text" onkeyup="addDetails('skills',this.value,3)"/><br/>
+    <table>
+        <thead>
+            <tr>
+                <td>#</td>
+                <td>course</td>
+                <td>years</td>
+                <td>Institute</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><input type="text" onkeyup="addDetails('course',this.value,0,'education')"/></td>
+                <td><input type="text" onkeyup="addDetails('years',this.value,0,'education')"/></td>
+                <td><input type="text" onkeyup="addDetails('Institute',this.value,0,'education')"/></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><input type="text" onkeyup="addDetails('course',this.value,1,'education')"/></td>
+                <td><input type="text" onkeyup="addDetails('years',this.value,1,'education')"/></td>
+                <td><input type="text" onkeyup="addDetails('Institute',this.value,1,'education')"/></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><input type="text" onkeyup="addDetails('course',this.value,2,'education')"/></td>
+                <td><input type="text" onkeyup="addDetails('years',this.value,2,'education')"/></td>
+                <td><input type="text" onkeyup="addDetails('Institute',this.value,2,'education')"/></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><input type="text" onkeyup="addDetails('course',this.value,3,'education')"/></td>
+                <td><input type="text" onkeyup="addDetails('years',this.value,3,'education')"/></td>
+                <td><input type="text" onkeyup="addDetails('Institute',this.value,3,'education')"/></td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="form"></div>
+    <script>
+        /* my_resume = {
+            name :"",
+            email : "",
+            phone : "",
+            role : "",
+            linkedIn : "",
+            objective : "",
+            education_details : [
+                {
+                    course :"",
+                    stream:"",
+                    institite : "",
+                    year_of_passing : "",
+                    percentage : "",
+                },
+                {
+                    course :"",
+                    stream:"",
+                    institite : "",
+                    year_of_passing : "",
+                    percentage : "",
+                },
+                {
+                    course :"",
+                    stream:"",
+                    institite : "",
+                    year_of_passing : "",
+                    percentage : "",
+                }
+            ],
+            computer_literacy:[],
+            project : [
+                {
+                    type:"",
+                    title :"",
+                    no_of_team_members: "",
+                    abstract :"",
+                },
+                {
+                    type:"",
+                    title :"",
+                    no_of_team_members: "",
+                    abstract :"",
+                }
+            ],
+            skills:[],
+            interests :[],
+            personal_details:{
+                fathe_name : "",
+                father_occupation :"",
+                siblings :"",
+                dob :"",
+                gender:'',
+                marital_status :"",
+                religion :"",
+                nationality :"",
+                languanges_known:[],
+            },
+            declaration :"",
+            date:"",
+            place:"",
+        }
+        */
+        let resume ={
+            skills:[],
+            
+        }
+        function addDetails(key,value,index=null,mainkey=null){
+            let key_obj = ["education","project"]
+            if(index == null){
+                resume[key] = value;
+            }
+            else if(key_obj.includes(mainkey)){
+                if(!resume[mainkey]){
+                    resume[mainkey] =[];
+                }
+                if(!resume[mainkey][index]){
+                    resume[mainkey][index] = {}
+                }
+                resume[mainkey][index][key] = value
+            }
+            else{
+                resume[key][index] = value
+            }
+                
+            display();
+        }
+        function display(){
+            document.getElementById("form").innerHTML = JSON.stringify(resume)
+        }
+    </script>
+</body>
+</html>

@@ -20,8 +20,8 @@
           <ol id="todo-items">
           </ol>
           <form class="mt-4 d-flex justify-content-around">
-            <button class="btn btn-primary my-2 px-4 rounded-pill " id="clear-completed-button" type="button">Clear Completed</button>
-            <button class="btn my-2 px-4 rounded-pill" type="button" id="empty-button" onclick="erace()">Empty List</button>
+            <button class="btn btn-primary my-2 px-4 rounded-pill " id="clear-completed-button" type="button" onclick="remove()">Clear Completed</button>
+            <button class="btn my-2 px-4 rounded-pill" type="button" id="empty-button" onclick="emptyList()">Empty List</button>
             <button class="btn btn-success my-2 px-4 rounded-pill" id="save-button" type="button">Save list</button>
           </form>
         </div>
@@ -30,28 +30,33 @@
         if(! localStorage.getItem("todo")){
             localStorage.setItem("todo",JSON.stringify([]))
         }
-        let list =JSON.parse(localStorage.getItem('todo'))
+        let list=JSON.parse(localStorage.getItem('todo'))
         function addItem(){
             let item = document.getElementById("todo-entry-box").value;
             list.push(item);
             localStorage.setItem("todo",JSON.stringify(list))
+            display()
         }
         function display(){
             let element = "";
             let display_elements = JSON.parse(localStorage.getItem("todo"));
             for(let i=0;i<display_elements.length;i++){
-                element = element + "<li>" + display_elements[i] + "<button onclick='removeItem()'> Delete</button>"+ "</li>" ;
+                element = element + "<li>" + display_elements[i] + "<input type=button onclick =remove("+ i +") value=delete></li>" ;
             }
             document.getElementById('todo-items').innerHTML = element;
         }
         display()
-        function removeItem(i){
-            let remove_list = JSON.parse(localStorage.getItem('todo'))
-            remove_list.remove()
-            localStorage.setItem("todo",JSON.stringify(remove_list))
-            display();
+        function emptyList(){
+           localStorage.removeItem('todo')
+           localStorage.setItem('todo',stringify([]))
+           document.getElementById('todo-items').innerHTML = null;
         }
-        
+        function remove(index){
+            let final_list = JSON.parse(localStorage.getItem("todo"))
+            final_list.splice(index,1);
+            localStorage.setItem("todo",JSON.stringify(final_list))
+            display()
+        }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
