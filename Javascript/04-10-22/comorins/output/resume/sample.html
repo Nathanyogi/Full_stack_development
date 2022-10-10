@@ -115,9 +115,14 @@
         <label>Nationality</label>
         <input type="text" onkeyup="addDetails('personal_details',this.value,'nationality')"/><br/><br/>
         <label>Declaration</label>
-        <textarea onkeyup="addDetails('personal_details',this.value,'declaration')"></textarea>
+        <textarea onkeyup="addDetails('declaration',this.value)"></textarea><br/>
+        <label>Date</label>
+        <input type="text" onkeyup="addDetials('date',this.value)"/><br/><br/>
+        <label>Place</label>
+        <input type="text" onkeyup="addDetials('place',this.value)"/><br/><br/>
+        <input type="button" onclick="store()" value="submit"/>
     </form>
-    <div id="resume"></div>
+    <ol id="resume"></ol>
     <script>
         let my_resume = {
         }
@@ -143,10 +148,25 @@
                 my_resume[key] = {}
                 my_resume[key][index] = value
             }
+            
+        }
+        function store(){
+            if(! localStorage.getItem("my_resume")){
+                localStorage.setItem("my_resume",JSON.stringify([]))
+            }
+            let new_resume = JSON.parse(localStorage.getItem('my_resume'));
+            new_resume.push(my_resume)
+            localStorage.setItem("my_resume",JSON.stringify(new_resume))
             display()
         }
+        display()
         function display(){
-            document.getElementById("resume").innerHTML = JSON.stringify(my_resume)
+            let list = JSON.parse(localStorage.getItem('my_resume'));
+            let list_item = "";
+            for (let i=0;i<list.length;i++){
+                list_item = list_item + "<li>" + "<a href='view.html?name="+list[i].name+"' target=_blank>"+list[i].name+"</a>" +"</li>"
+            }
+            document.getElementById("resume").innerHTML = list_item;
         }
     </script>
 </body>

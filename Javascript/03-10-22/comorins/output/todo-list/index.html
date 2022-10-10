@@ -48,13 +48,14 @@
         display()
         function emptyList(){
            localStorage.removeItem('todo')
-           localStorage.setItem('todo',stringify([]))
            document.getElementById('todo-items').innerHTML = null;
+           setTimeout("location.reload(true);",0)
         }
         function remove(index){
             let final_list = JSON.parse(localStorage.getItem("todo"))
             final_list.splice(index,1);
             localStorage.setItem("todo",JSON.stringify(final_list))
+            setTimeout("location.reload(true);",0)
             display()
         }
     </script>

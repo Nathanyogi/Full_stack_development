@@ -1,0 +1,46 @@
+body{
+    font-family: 'Roboto';
+    font-size: 14px;
+    background-color: #f1f3f6;
+    color: #212121;
+    line-height: 1.4;
+    font-weight: bolder;
+}  
+/* navbar style starts here */
+nav{
+    position: fixed;
+    top: 0;
+}
+.navbar img{
+    height: 50px;
+}
+.nav-content{
+    flex-grow:unset;
+}
+.nav-input{
+    width: 450px !important;
+}
+.nav-ul li{
+    margin-left: 20px;
+}
+.nav-ul span{
+    vertical-align: middle;
+    margin-left: 4px;
+}
+
+/* navbar style ends here */
+/* nav style ends here */
+.nav-2{
+    background-color: #ffff;
+    
+}
+.nav-2 li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nav-2 a{
+    font-weight: 500px;
+    font-family: 'Roboto';
+    font-size: 14px;
+}
