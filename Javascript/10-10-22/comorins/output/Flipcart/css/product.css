@@ -31,34 +31,7 @@ header{
     margin-left: 4px;
 }
 /* header style ends here */
-/* nav style ends here */
-.nav-2{
-    background-color: #ffff;
-    
-}
-.nav-2 li{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.nav-2 a{
-    font-weight: 500px;
-    font-family: 'Roboto';
-    font-size: 14px;
-}
-/* section div style starts here */
-section .offer-contents img{
-    height: 200px;
-}
-section .offer-contents .el-col{
-    min-width: 23%;
-    max-width: 23%;
-    border: none;
-    border-radius: 0%;
-}
-/* section div style ends here */
 /* footer style starts here */
 .footer {
     background-color: #172337
 }
-/* footer style starts here */
