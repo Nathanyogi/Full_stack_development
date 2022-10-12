@@ -1,28 +1,29 @@
 let best_offer = {
-    electronics :[{
-        img:"https://rukminim1.flixcart.com/image/200/200/knyxqq80/dslr-camera/r/y/x/digital-camera-eos-m50-mark-ii-eos-m50-mark-ii-canon-original-imag2gzkexzqhyhu.jpeg?q=70",
-        product:"Camera",
-        price:"3999",
-        brands:"Canon,sony"
-    },
-    {
-        img:"https://rukminim1.flixcart.com/image/200/200/ktszgy80/monitor/b/b/5/ed320qr-full-hd-um-je0ss-p01-acer-original-imag72hyazezew4b.jpeg?q=70",
-        product:"Monitors",
-        price:"7500",
-        brands:"Lenovo"
-    },
-    {
-        img:"https://rukminim1.flixcart.com/image/200/200/kj7gwi80pkrrdj-0/trimmer-refurbished/o/r/u/a-device-of-man-ns-216-runtime-45-min-trimmer-for-men-women-original-imaftfg9hbedkwzu.jpeg?q=70",
-        product:"Trimmer",
-        price:"2000",
-        brands:"Mi,Realme"
-    },
-    {
-        img:"https://rukminim1.flixcart.com/image/200/200/xif0q/projector/e/p/v/k9-pro-android-fhd-1080p-10-pre007-full-hd-egate-original-imagg9k9zauxwrfj.jpeg?q=70",
-        product:"Projector",
-        price:"6990",
-        brands:"Vega,Philips & More"
-    },
+    electronics :[
+        {
+            img:"https://rukminim1.flixcart.com/image/200/200/knyxqq80/dslr-camera/r/y/x/digital-camera-eos-m50-mark-ii-eos-m50-mark-ii-canon-original-imag2gzkexzqhyhu.jpeg?q=70",
+            product:"Camera",
+            price:"3999",
+            brands:"Canon,sony"
+        },
+        {
+            img:"https://rukminim1.flixcart.com/image/200/200/ktszgy80/monitor/b/b/5/ed320qr-full-hd-um-je0ss-p01-acer-original-imag72hyazezew4b.jpeg?q=70",
+            product:"Monitors",
+            price:"7500",
+            brands:"Lenovo"
+        },
+        {
+            img:"https://rukminim1.flixcart.com/image/200/200/kj7gwi80pkrrdj-0/trimmer-refurbished/o/r/u/a-device-of-man-ns-216-runtime-45-min-trimmer-for-men-women-original-imaftfg9hbedkwzu.jpeg?q=70",
+            product:"Trimmer",
+            price:"2000",
+            brands:"Mi,Realme"
+        },
+        {
+            img:"https://rukminim1.flixcart.com/image/200/200/xif0q/projector/e/p/v/k9-pro-android-fhd-1080p-10-pre007-full-hd-egate-original-imagg9k9zauxwrfj.jpeg?q=70",
+            product:"Projector",
+            price:"6990",
+            brands:"Vega,Philips & More"
+        },
     ],
     beauty_food_toys:[
         {
@@ -33,7 +34,7 @@ let best_offer = {
         },
         {
             img:"https://png.pngtree.com/png-vector/20191009/ourmid/pngtree-piano-keyboard-vector-png-image_1777158.jpg",
-            product:"Musical Keyboard",
+            product:"Musical_Keyboard",
             price:"70%",
             brands:"Beston,Redbox & More",
         },
@@ -45,7 +46,7 @@ let best_offer = {
         },
         {
             img:"https://rukminim1.flixcart.com/image/200/200/klzhq4w0/jam-spread/w/q/u/510-chocolate-peanut-butter-crunchy-510g-jar-nut-butter-original-imagyzpqqfaguxny.jpeg?q=70",
-            product:"Food Spreads",
+            product:"Food_Spreads",
             price:"75%",
             brands:"Myfiness,Alpino & More",
         }
@@ -53,7 +54,7 @@ let best_offer = {
 }
 
 let product_list ={
-    camera:[
+    Camera:[
         {
             img:"https://rukminim1.flixcart.com/image/312/312/xif0q/instant-camera/r/k/t/instax-mini-11-moments-box-instax-mini-11-moments-box-instant-original-imaggmffkfwdmbh8.jpeg?q=70",
             product:"FUJIFILM Instax Mini 11 Moments Box Instant Camera",
@@ -91,7 +92,7 @@ let product_list ={
             delivery:"Free Delivery"
         },
     ],
-    monitors:[
+    Monitors:[
         {
             img:"https://rukminim1.flixcart.com/image/312/312/l5ld8y80/monitor/w/8/5/-original-imagg897bcqqhczw.jpeg?q=70",
             product:"SAMSUNG 27 inch Curved Full HD VA Panel with 1800R Curvature, Game Mode Function, Eye-Saver Mode, Flic...",
@@ -130,9 +131,9 @@ let product_list ={
             delivery:"Free delivery",
         },
     ],
-    projector:[
+    Projector:[
         {
-            img:"https://rukminim1.flixcart.com/image/612/612/l1dwknk0/projector/7/a/q/latest-2022-mp11-full-hd-native-android-bluetooth-home-theater-original-imagcyswwfazpxfh.jpeg?q=70",
+            img:"https://rukminim1.flixcart.com/image/612/612/ktx9si80/projector/j/3/d/advance-full-hd-led-wifi-3d-mini-projector-for-1080p-video-original-imag756hqczfmhr9.jpeg?q=70",
             product:"PLAY Latest 2022 MP11 Full HD Native Android Bluetooth Home theater cinema Projector (6500 lm / Wireless / Remote Controller) Portable Projector",
             specification:["Silvar","Portable: Yes","Internal Storage: 8192 MB","Maximum Brightness: 6500lm"],
             offer_price:"24,819",
@@ -160,9 +161,9 @@ let product_list ={
             delivery:"Free delivery",
         },
     ],
-    trimmers:[
+    Trimmer:[
         {
-            img:"https://rukminim1.flixcart.com/image/612/612/kdnf98w0-0/trimmer/s/y/e/0-5-10-mm-stainless-steel-xxq02hm-cordless-mi-original-imafug358t8cxzzk.jpeg?q=70",
+            img:"https://rukminim1.flixcart.com/image/612/612/xif0q/trimmer/e/o/f/0-5-12-mm-nht-1042-usb-stainless-steel-cordless-nova-original-imaggksvup2wwpqf.jpeg?q=70",
             product:"Mi XXQ02HM Trimmer 60 min  Runtime 20 Length Settings &nbsp;&nbsp;(Black)",
             specification:["Blade Material: Stainless Steel","Timming Range: 0.5-10 mm","60 min battery run time","Gender: men"],
             offer_price:"799",
@@ -171,7 +172,7 @@ let product_list ={
             delivery:"Free delivery",
         },
         {
-            img:"https://rukminim1.flixcart.com/image/612/612/kyrlifk0/trimmer/b/n/4/-original-imagaxgncgcxndjj.jpeg?q=70",
+            img:"https://rukminim1.flixcart.com/image/612/612/kuof5ow0/trimmer/7/z/f/0-5-10-mm-bt3101-15-stainless-steel-cordless-philips-original-imag7r4r7ztgnuyk.jpeg?q=70",
             product:"PHILIPS BT3231/15 Trimmer 60 min  Runtime 20 Length Settings &nbsp;&nbsp;(Green)",
             specification:["Blade Material: Stainless Steel","Timming Range: 0.5-10 mm","60 min battery run time","Gender: men"],
             offer_price:"1,125",
@@ -180,7 +181,7 @@ let product_list ={
             delivery:"Free delivery",
         },
         {
-            img:"https://rukminim1.flixcart.com/image/612/612/kuof5ow0/trimmer/m/q/v/0-5-7-mm-bt1232-15-stainless-steel-cordless-philips-original-imag7r4rh8ewvfnr.jpeg?q=70",
+            img:"https://rukminim1.flixcart.com/image/612/612/ko4ni4w0/trimmer/x/v/k/0-5-12-mm-stainless-steel-ng-1153-digital-usb-corded-cordless-original-imag2ngynbhz6p43.jpeg?q=70",
             product:"PHILIPS BT1232/15 Trimmer 30 mins  Runtime 3 Length Settings &nbsp;&nbsp;(Blue)",
             specification:["Blade Material: Stainless Steel","Timming Range: 0.5-7 mm","30 min battery run time","Gender: men"],
             offer_price:"644",
@@ -188,25 +189,110 @@ let product_list ={
             offer:"35%",
             delivery:"Free delivery",
         },
-    ]
+    ],
+    Sports :[
+        {
+            img:"https://rukminim1.flixcart.com/image/612/612/kv8fbm80/kit/o/y/q/mrf-grand-edition-vk-18-full-size-ideal-for-15-21-years-complete-original-imag86qh9m2spjhp.jpeg?q=70 ",
+            product:"HF MRF GRAND Edition VK - 18 Full Size ( Ideal For 15-21 Years ) Complete Cricket Kit",
+            specification:["1 KITBAG","BAT","BATTING PAD","HELMET","LBO GUARD","1 LEATHER BALL","GLOVES"],
+            offer_price:"3,699",
+            original_price:"18,999",
+            offer:"80%",
+            delivery:"Free delivary"
+        },
+        {
+            img:"https://rukminim1.flixcart.com/image/612/612/l3vxbbk0/kit/b/2/h/dominator-senior-plastic-cricket-bat-with-soft-cricket-ball-na-4-original-imagewskwrppxtpu.jpeg?q=70",
+            product:"Jaspo Dominator Senior Plastic Cricket Bat with Soft Cricket Ball Cricket Kit",
+            specification:["Green","Metirial: Plastic","4 Pieces","Kids"],
+            offer_price:"499",
+            original_price:"1,199",
+            offer:"58%",
+            delivery:"Delivery charge: 40"
+        },
+    ],
+    Musical_Keyboard:[
+        {
+            img:"https://rukminim1.flixcart.com/image/612/612/kasjjww0/musical-keyboard/h/n/z/ks49-casio-original-imafs9huahwyjtwz.jpeg?q=70",
+            product:"CASIO CT-X870IN KS44A Digital Portable Keyboard",
+            specification:["NO. of Keys: 61","Key Type: Solid","Control Panel: Digital","Built in Speakers","For: Intermediate","3 Years Warranty"],
+            offer_price:"13,396",
+            original_price:"14,995",
+            offer:"10%",
+            delivery:"Free delivery"  
+        },
+        {
+            img:"https://rukminim1.flixcart.com/image/612/612/kasjjww0/musical-keyboard/z/w/7/ct-x870in-casio-original-imafs9hutczdmwrz.jpeg?q=70",
+            product:"CASIO CTK-240 CTK-240 Digital Portable Keyboard",
+            specification:["NO. of Keys: 49","Key Type: Lever","Control Panel: Digital","Built in Speakers","For: Beginners","3 Years Warranty"],
+            offer_price:"5,599",
+            original_price:"6,165",
+            offer:"9%",
+            delivery:"Free delivery"  
+        },
+    ],
+    Skincare:[
+        {
+            img:"https://rukminim1.flixcart.com/image/612/612/l3dcl8w0/moisturizer-cream/g/p/y/-original-imageg3j4crfx89p.jpeg?q=70",
+            product:"Vaseline Non Greasy Intensive Care Deep Moisture Body Lotion  (400 ml)",
+            specification:["Application Area: Body","For Men & Women","All Day Cream","For All Skin","TypesLotion Form"],
+            offer_price:"149",
+            original_price:"365",
+            offer:"60%",
+            delivery:"Delivery charge: 40",
+        },
+        {
+            img:"https://rukminim1.flixcart.com/image/612/612/l09w8sw0/moisturizer-cream/t/f/l/-original-imagc3j9xev7dzzg.jpeg?q=70",
+            product:"POND's Bright Beauty Serum Cream Anti-Spot Fairness SPF 15 Day Cream  (35 g)",
+            specification:["Application Area: Body","For Women","All Day Cream","For All Skin","Types Lotion Form"],
+            offer_price:"127",
+            original_price:"160",
+            offer:"20%",
+            delivery:"Delivery charge: 40",
+        },
+    ],
+    Food_Spreads:[
+        {
+            img:"https://rukminim1.flixcart.com/image/612/612/kn97te80/jam-spread/l/b/k/chocolate-peanut-butter-jar-nut-butter-myfitness-original-imagfz6kb5mdbqez.jpeg?q=70",
+            product:"MYFITNESS Chocolate Peanut Butter 1250 g",
+            specification:["Antioxidants","Vitamin & Minerals","High Protein","Energy Booster",],
+            offer_price:"501",
+            original_price:"649",
+            offer:"22%",
+            delivery:"Delivery charge: 40",
+        },
+        {
+            img:"https://rukminim1.flixcart.com/image/612/612/kxf0jgw0/jam-spread/c/j/r/1-classic-peanut-butter-crunch-1-kg-made-with-roasted-peanuts-25-original-imag9vhpzqbencdz.jpeg?q=70",
+            product:"ALPINO Classic Crunch | High Protein Peanut Butter Crunchy | Vegan 1 kg",
+            specification:["Roasted Peanuts","24% Protein","Non GMO","Gluten Free","Vegan"],
+            offer_price:"220",
+            original_price:"449",
+            offer:"51%",
+            delivery:"Delivery charge: 40",
+        },
+    ],
 }
+console.log(product_list);
 function createkey(localkey,localvalue){
+    
     if(! localStorage.getItem(localkey)){
-        localStorage.setItem(localkey,JSON.stringify([]))
+        localStorage.setItem(localkey,JSON.stringify([localvalue]))
         
     }
-    let dummy_array = JSON.parse(localStorage.getItem(localkey));
-    dummy_array.push(localvalue);
-    localStorage.setItem(localkey,JSON.stringify(dummy_array))
+    // let dummy_array = JSON.parse(localStorage.getItem(localkey));
+    // dummy_array.push(localvalue);
+    // localStorage.setItem(localkey,JSON.stringify(dummy_array))
 }
 createkey("top_offer",best_offer);
-
+createkey("product_list",product_list)
 
 function showItem(localkey,key){
     let list = JSON.parse(localStorage.getItem(localkey));
     let ele = "";
-    for(let i = 0 ; i<list[i][key].length;i++){
-        ele += "<div class='card col text-center pt-2 el-col'>"+"<img class ='card-img-top' src="+list[i][key][i].img+ ">" + "<div class='card-body'><h4 class='card-text'>"+list[i][key][i].product+"</h4>"+ "<p class='text-success'>Offer price: "+list[i][key][i].price + "</p>"+  "<p class='text-secondary'>"+list[i][key][i].brands+ "</p>" +"<a class='btn btn-sm btn-primary' target='_blank' href=products.html?name="+list[i][key][i].product+">View Products</a>"+ "</div>"+ "</div>"
+    for(let i = 0;i<list.length;i++){
+        for(let j = 0;j<list[i][key].length;j++){
+            ele += "<div class='card col text-center pt-2 el-col'>"+"<img class ='card-img-top' src="+list[i][key][j].img+ ">" 
+            + "<div class='card-body'><h4 class='card-text'>"+list[i][key][j].product+"</h4>"+ "<p class='text-success'>Offer price: "+list[i][key][j].price + "</p>"+  "<p class='text-secondary'>"+list[i][key][j].brands+ "</p>" +"<a class='btn btn-sm btn-primary' target='_blank' href=products.html?name="+list[i][key][j].product+">View Products</a>"+ "</div>"+ "</div>"
+        }
     }
     if(key == "electronics"){
         document.getElementById('elec-product-offers').innerHTML = ele
