@@ -30,6 +30,9 @@ header{
     vertical-align: middle;
     margin-left: 4px;
 }
+#username{
+    font-size: 15px;
+}
 /* header style ends here */
 /* nav style ends here */
 .nav-2{
@@ -75,4 +78,10 @@ section .offer-contents .el-col{
 #products ul li{
     font-size: 20px;
     font-weight: lighter;
+}
+
+/* cart page style */
+#cartlist img{
+    height: 250px;
+    width: 100%;
 }

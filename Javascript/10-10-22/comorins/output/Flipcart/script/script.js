@@ -271,7 +271,6 @@ let product_list ={
         },
     ],
 }
-console.log(product_list);
 function createkey(localkey,localvalue){
     
     if(! localStorage.getItem(localkey)){
@@ -286,31 +285,170 @@ createkey("top_offer",best_offer);
 createkey("product_list",product_list)
 
 function showItem(localkey,key){
-    let list = JSON.parse(localStorage.getItem(localkey));
+    let lists = JSON.parse(localStorage.getItem(localkey));
     let ele = "";
-    for(let i = 0;i<list.length;i++){
-        for(let j = 0;j<list[i][key].length;j++){
-            ele += "<div class='card col text-center pt-2 el-col'>"+"<img class ='card-img-top' src="+list[i][key][j].img+ ">" 
-            + "<div class='card-body'><h4 class='card-text'>"+list[i][key][j].product+"</h4>"+ "<p class='text-success'>Offer price: "+list[i][key][j].price + "</p>"+  "<p class='text-secondary'>"+list[i][key][j].brands+ "</p>" +"<a class='btn btn-sm btn-primary' target='_blank' href=products.html?name="+list[i][key][j].product+">View Products</a>"+ "</div>"+ "</div>"
+    let path = window.location.pathname;
+    let index = "/C:/Users/ELCOT/Desktop/full_stack_trainig/Javascript/10-10-22/comorins/output/Flipcart/index.html"
+    if(path == index){
+        for(let i = 0;i<lists.length;i++){
+            for(let j = 0;j<lists[i][key].length;j++){
+                ele += "<div class='card col text-center pt-2 el-col'>"+"<img class ='card-img-top' src="+lists[i][key][j].img+ ">" 
+                + "<div class='card-body'><h4 class='card-text'>"+lists[i][key][j].product+"</h4>"+ "<p class='text-success'>Offer price: "+lists[i][key][j].price + "</p>"+  "<p class='text-secondary'>"+lists[i][key][j].brands+ "</p>" +"<a class='btn btn-sm btn-primary' target='_blank' href=products.html?name="+lists[i][key][j].product+">View Products</a>"+ "</div>"+ "</div>"
+            }
+        }
+        if(key == "electronics"){
+            document.getElementById('elec-product-offers').innerHTML = ele
+        }
+        else if(key == "beauty_food_toys"){
+            document.getElementById('food-beauty-offers').innerHTML = ele
+        }
+        else{
+            alert('product is not update in object')
         }
     }
-    if(key == "electronics"){
-        document.getElementById('elec-product-offers').innerHTML = ele
-        console.log(list[0][key].length)
-    }
-    else if(key == "beauty_food_toys"){
-        document.getElementById('food-beauty-offers').innerHTML = ele
-        
-        // document.getElementById('price-content').textContent = "Discount"
-        console.log(list[1][key].length)
-    }
-    else{
-        alert('product is not update in object')
-    }
+    
 }
 showItem("top_offer","electronics")
 showItem('top_offer',"beauty_food_toys")
-// document.getElementById("img").src= list[i].electronics[j].img
-// document.getElementById("device").textContent = list[i].electronics[j].device
-// document.getElementById("price").textContent = list[i].electronics[j].price
-// document.getElementById("brands").textContent = list[i].electronics[j].brands
+
+// product page
+
+// buynow log in check
+
+// sign up function
+if(! localStorage.getItem('userdetails')){
+    localStorage.setItem('userdetails',JSON.stringify([]))
+}
+function addUser(){
+    let user_data = {
+
+    }
+    let arr=[]
+    let userdetails = JSON.parse(localStorage.getItem('userdetails'));
+    let user = document.getElementById('username').value;
+    document.getElementById('username').value = '';
+    let create_pass = document.getElementById('create_password').value;
+    document.getElementById('create_password').value = "";
+    let pass = document.getElementById('password').value;
+    document.getElementById('password').value = "";
+    let emp =""
+    for(i=0;i<userdetails.length;i++){
+        arr.push(userdetails[i].username)
+    } 
+    if(user=="" && pass==""){
+        alert("please enter username and password")
+    }
+    else if(user == emp){
+        alert("please enter username")
+    }
+    else if(pass == emp){
+        alert('Please enter the password')
+    }
+    else if(user == pass){
+        alert('username and password is same')
+    }
+    else if( (!arr.includes(user)) && (create_pass != pass)){
+        document.getElementById('username').value = user;
+        alert("Please enter the same password")
+    }
+    else if(! arr.includes(user)){
+        user_data.username = user
+        user_data.password = pass
+        user_data.status = false
+        userdetails.push(user_data)
+        alert("sign up completed")
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const loginredict = urlParams.get('name')
+        if(loginredict != null){
+            location.replace("login.html?name="+loginredict)
+        }
+        else{
+            location.replace("login.html")
+        }
+    }
+    else{
+        alert("User name is already exsits")
+    }
+    localStorage.setItem("userdetails",JSON.stringify(userdetails))
+}
+
+// signup page redirect function
+function signupRedic(){
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const signurl = urlParams.get('name')
+    if(signurl != null){
+        location.replace("signup.html?name="+signurl)
+    }
+    else{
+        location.replace("signup.html")
+    }
+}
+// nav login button redirect function
+function navLogRedic(){
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const loginurl = urlParams.get('name')
+    if(loginurl != null){
+        location.replace("login.html?name="+loginurl)
+    }
+    else{
+        location.replace("login.html")
+    }
+
+}
+// for login page login button
+function login(){
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const page = urlParams.get('name')
+    let user = document.getElementById('user_log').value
+    let pass = document.getElementById('pass_log').value
+    let login_check = JSON.parse(localStorage.getItem("userdetails"))
+    let alert_user = true;
+    for(i=0;i<login_check.length;i++){
+        if(login_check[i].username==user && login_check[i].password==pass){
+            login_check[i].status = true  ;
+            alert_user =false;
+            localStorage.setItem('userdetails',JSON.stringify(login_check))
+            if(page != null){
+                location.replace("products.html?name="+page);
+            }
+            else{
+                location.replace('index.html');
+            }
+        }
+        else if(! login_check[i].username==user && login_check[i].password==pass){
+            alert_user= true;
+        }
+    }
+    if(alert_user == true){
+        alert("user name password didn't match")
+    }
+
+}
+
+// login and logout
+function logInOutShow(){
+    let logInOut = JSON.parse(localStorage.getItem("userdetails"))
+    for(let i=0;i<logInOut.length;i++){
+        if(logInOut[i].status== true){
+            document.getElementById('login_show').innerHTML = "<a class='btn btn-sm btn-light ml-3' onclick='logout()'>Logout</a>"
+            document.getElementById('username').innerHTML = logInOut[i].username[0].toUpperCase()
+        }
+    }
+}
+logInOutShow()
+
+function logout(){
+    let logout = JSON.parse(localStorage.getItem("userdetails"))
+    for(let i=0;i<logout.length;i++){
+        if(logout[i].status== true){
+            logout[i].status = false
+            localStorage.setItem('userdetails',JSON.stringify(logout))
+            document.getElementById('login_show').innerHTML = "<a class='btn btn-sm btn-light ml-3' onclick='navLogRedic()'>login</a>"
+            document.getElementById('username').innerHTML = "user"
+        }
+    }
+}

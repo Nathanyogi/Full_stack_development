@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/login.css"/>
+    <title>log in!</title>
+  </head>
+</head>
+<body>
+    <div class="login">
+        <div class="login-header">
+          <h1>Login</h1>
+        </div>
+        <div class="login-form">
+          <h3>Username:</h3>
+          <input type="text" placeholder="Username" id="user_log"/><br>
+          <h3>Password:</h3>
+          <input type="password" placeholder="Password" id="pass_log"/>
+          <br>
+          <input type="button" value="Login" class="login-button" onclick='login()'/>
+          <br>
+          <a class="sign-up" onclick="signupRedic()">sign-up!</a>
+          <br>
+        </div>
+      </div>
+    </div>
+    <script src="script/script.js"></script>
+    <script src="script/product.js"></script>
+</body>
+</html>
