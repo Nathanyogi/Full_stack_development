@@ -312,9 +312,6 @@ showItem("top_offer","electronics")
 showItem('top_offer',"beauty_food_toys")
 
 // product page
-
-// buynow log in check
-
 // sign up function
 if(! localStorage.getItem('userdetails')){
     localStorage.setItem('userdetails',JSON.stringify([]))
@@ -452,3 +449,11 @@ function logout(){
         }
     }
 }
+
+// search button
+
+// function search_fn(){
+//     let search_entry = document.getElementById('entry_box').value
+//     window.location.replace("products.html")
+
+// }

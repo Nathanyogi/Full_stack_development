@@ -1,21 +1,21 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const product_name = urlParams.get('name')
-function showProduct(){
+function showProduct(product){
     let list=JSON.parse(localStorage.getItem("product_list"));
     let products = ""
     let spec =""
-    if(product_name !=null){
+    if(product !=null){
         for(let i = 0;i<list.length;i++){
-            for(let j = 0;j<list[i][product_name].length;j++){
-                if(list[i][product_name][j].specification){
-                    for(let k=0;k<list[i][product_name][j].specification.length;k++){
-                        spec = spec+"<li class='text-secondary mt-2'>"+list[i][product_name][j].specification[k]+"</li>"
+            for(let j = 0;j<list[i][product].length;j++){
+                if(list[i][product][j].specification){
+                    for(let k=0;k<list[i][product][j].specification.length;k++){
+                        spec = spec+"<li class='text-secondary mt-2'>"+list[i][product][j].specification[k]+"</li>"
                     }
                 }
-                products += "<div class='row'>"+"<div class=\"col-4 text-center\">" + "<img src="+list[i][product_name][j].img +">"+"</div>"+"<div class=col-6>"+"<h4>"+list[i][product_name][j].product 
-                +"</h4>"+"<ul>"+spec+"</ul>" +"</div>"+"<div class=col-2>"+"<h2> Rs"+list[i][product_name][j].offer_price+"</h2>"+"<span class=text-secondary><s>Rs "+list[i][product_name][j].original_price+"</s></span>"
-                +"<span class=text-success>"+" "+list[i][product_name][j].offer+" off</span>"+"<p>"+list[i][product_name][j].delivery+"</p>"+"<a href=# class='btn btn-warning' onclick='loginCheck()' >BUY NOW</a><a href=# class='btn btn-secondary mt-2' onclick=addToCart("+i+","+'"'+product_name+'"'+","+j+")>ADD TO CART </a>"+"</div>"+"</div>"+"<hr/>"
+                products += "<div class='row'>"+"<div class=\"col-4 text-center\">" + "<img src="+list[i][product][j].img +">"+"</div>"+"<div class=col-6>"+"<h4>"+list[i][product][j].product 
+                +"</h4>"+"<ul>"+spec+"</ul>" +"</div>"+"<div class=col-2>"+"<h2> Rs"+list[i][product][j].offer_price+"</h2>"+"<span class=text-secondary><s>Rs "+list[i][product][j].original_price+"</s></span>"
+                +"<span class=text-success>"+" "+list[i][product][j].offer+" off</span>"+"<p>"+list[i][product][j].delivery+"</p>"+"<a href=# class='btn btn-warning' onclick='loginCheck()' >BUY NOW</a><a href=# class='btn btn-secondary mt-2' onclick=addToCart("+i+","+'"'+product+'"'+","+j+")>ADD TO CART </a>"+"</div>"+"</div>"+"<hr/>"
                 spec="";
             }
         }
@@ -23,16 +23,19 @@ function showProduct(){
     }
 }
 
-showProduct()
+showProduct(product_name)
 
 function loginCheck(){
     let buynow_log =JSON.parse(localStorage.getItem('userdetails'))
-    for(let i=0;i<buynow_log.length;i++){
-        if(buynow_log[i].status == true){
-            location.replace('buy.html')
-        }
+    console.log(buynow_log)
+    let login_logo = document.getElementById('username').innerHTML
+    if(login_logo == "user"){
+        location.replace("login.html?name="+product_name)  
     }
-    window.location.replace("login.html?name="+product_name)  
+    else{
+        location.replace('buy.html')
+    }
+       
 }
 // Add to cart
 if(! localStorage.getItem('cart')){
