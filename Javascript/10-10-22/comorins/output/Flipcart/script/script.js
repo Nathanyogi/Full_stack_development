@@ -427,33 +427,35 @@ function login(){
 }
 
 // login and logout
-function logInOutShow(){
+function logOutShow(){
     let logInOut = JSON.parse(localStorage.getItem("userdetails"))
     for(let i=0;i<logInOut.length;i++){
         if(logInOut[i].status== true){
-            document.getElementById('login_show').innerHTML = "<a class='btn btn-sm btn-light ml-3' onclick='logout()'>Logout</a>"
-            document.getElementById('username').innerHTML = logInOut[i].username[0].toUpperCase()
+            document.getElementById('login_show').innerHTML = "<a class='btn btn-sm btn-light ml-3' onclick='login_show()'>Logout</a>"
+            document.getElementById('username').textContent = logInOut[i].username[0].toUpperCase()
         }
     }
+    
 }
-logInOutShow()
+logOutShow()
 
-function logout(){
+function login_show(){
     let logout = JSON.parse(localStorage.getItem("userdetails"))
     for(let i=0;i<logout.length;i++){
         if(logout[i].status== true){
             logout[i].status = false
             localStorage.setItem('userdetails',JSON.stringify(logout))
             document.getElementById('login_show').innerHTML = "<a class='btn btn-sm btn-light ml-3' onclick='navLogRedic()'>login</a>"
-            document.getElementById('username').innerHTML = "user"
+            document.getElementById('username').textContent = "user"
         }
     }
 }
 
 // search button
 
-// function search_fn(){
-//     let search_entry = document.getElementById('entry_box').value
-//     window.location.replace("products.html")
-
-// }
+function search_fn(){
+    let search_entry = document.getElementById('entry_box').value
+    let search_item = search_entry.charAt(0).toUpperCase()+  search_entry.slice(1)
+    window.location.replace("products.html?name="+search_item)
+    
+}

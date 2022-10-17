@@ -26,14 +26,14 @@ function showProduct(product){
 showProduct(product_name)
 
 function loginCheck(){
-    let buynow_log =JSON.parse(localStorage.getItem('userdetails'))
-    console.log(buynow_log)
-    let login_logo = document.getElementById('username').innerHTML
+    // let buynow_log =JSON.parse(localStorage.getItem('userdetails'))
+    let login_logo = document.getElementById('username').innerText
+    console.log(login_logo)
     if(login_logo == "user"){
-        location.replace("login.html?name="+product_name)  
+        location.replace("login.html?name="+product_name) 
     }
     else{
-        location.replace('buy.html')
+        location.replace('buy.html')          
     }
        
 }
@@ -55,7 +55,7 @@ function showCartProduct(){
     let cart_items = JSON.parse(localStorage.getItem('cart'))
     let cart_element="";
     for(let i=0;i<cart_items.length;i++){
-        cart_element += "<div class='row bg-white'>"+ 
+        cart_element += "<div class='row bg-white mt-3 align-items-center'>"+ 
         "<div class='col-4'>"+"<img src="+cart_items[i].img+"></div>"+
         "<div class='col-8'><p class='card-text'>"+ cart_items[i].product+"</p>"+
         "<h3>Rs: "+cart_items[i].offer_price+"</h3><p class='text-success'><span class='mr-2'><s class='text-secondary'>"+cart_items[i].original_price+"</s></span>"+cart_items[i].offer+" off</p><p>"+cart_items[i].delivery+"</p><a class='btn bg-secondary' onclick='removeItem("+i+")'> RemoveItem</a></div>"+"</div>"
