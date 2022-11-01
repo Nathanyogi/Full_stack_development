@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Ajax</title>
+</head>
+<body>
+    <!-- <button>click to add object</button> -->
+    <code class="element">
+    </code>
+    <table border="1px" class="mx-auto">
+        <thead>
+            <tr>
+                <th class="text-center">No</th>
+                <th class="text-center">Todo</th>
+                <th class="text-center">Completed</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script type="text/javascript">
+        $(document).ready(function(){
+            $("button").click(function(){{
+                $.ajax({
+                    url : "https://jsonplaceholder.typicode.com/posts",
+                    success : function(data){
+                        $(".element").html(JSON.stringify(data))
+                    }
+                });
+            }});
+        });
+    </script> -->
+    <!-- <script type="text/javascript">
+        $(document).ready(function(){
+            $.ajax({
+                url : "https://jsonplaceholder.typicode.com/posts",
+                success : function(data){
+                    for(let i=0;i<data.length;i++){
+                        let id = data[i].id
+                        let title = data[i].title
+                        let text = data[i].body
+
+                        let show = "<div class='card content'><div class='card-body'>"
+                        + "<h3>"+id +"</h3><h5 class='card-title'>"+title+"</h5>"
+                        +"<p class='card-text'>"+text+"</p></div></div>"
+
+                        $(".element").append(show)
+                    }
+                }
+            })
+        });
+    </script> -->
+    <script>
+        $(document).ready(function(){
+            $.ajax({
+                url : "https://dummyjson.com/todos",    
+                success : function(data){
+                    let todo_list = data.todos
+                    for(let i = 0;i<todo_list.length; i++){
+                        let id = todo_list[i].idq
+                        let todo = todo_list[i].todo 
+                        let completed = todo_list[i].completed
+
+                        let final_list = "<tr><td>"+id+"</td><td>"+todo+"</td><td class='text-center'>"+completed+"</td></tr>"
+
+                        $("tbody").append(final_list)
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

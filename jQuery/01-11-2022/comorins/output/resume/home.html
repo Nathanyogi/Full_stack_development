@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resume</title>
+</head>
+<body>
+    <form>
+        <h1 style="text-align:center;">Resume Generator</h1>
+        <label>Name</label>
+        <input type="text" onkeyup="addDetails('name',this.value)"/><br/><br/>
+        <label>Email</label>
+        <input type="text" onkeyup="addDetails('email',this.value)"/><br/><br/>
+        <label>Phone</label>
+        <input type="text" onkeyup="addDetails('phone',this.value)"/><br/><br/>
+        <label>Role</label>
+        <input type="text" onkeyup="addDetails('Role',this.value)"/><br/><br/>
+        <label>Education</label>
+        <table>
+            <thead>
+                <tr>
+                    <td>#</td>
+                    <td>course</td>
+                    <td>year</td>
+                    <td>Institute</td>
+                    <td>stream</td>
+                    <td>Percentage</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><input type="text" onkeyup="addDetails('education',this.value,0,'course')"/></td>
+                    <td><input type="text" onkeyup="addDetails('education',this.value,0,'year')"/></td>
+                    <td><input type="text" onkeyup="addDetails('education',this.value,0,'institute')"/></td>
+                    <td><input type="text" onkeyup="addDetails('education',this.value,0,'stream')"/></td>
+                    <td><input type="text" onkeyup="addDetails('education',this.value,0,'percentage')"/></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><input type="text" onkeyup="addDetails('education',this.value,1,'course')"/></td>
+                    <td><input type="text" onkeyup="addDetails('education',this.value,1,'year')"/></td>
+                    <td><input type="text" onkeyup="addDetails('education',this.value,1,'institute')"/></td>
+                    <td><input type="text" onkeyup="addDetails('education',this.value,1,'stream')"/></td>
+                    <td><input type="text" onkeyup="addDetails('education',this.value,1,'percentage')"/></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><input type="text" onkeyup="addDetails('education',this.value,2,'course')"/></td>
+                    <td><input type="text" onkeyup="addDetails('education',this.value,2,'year')"/></td>
+                    <td><input type="text" onkeyup="addDetails('education',this.value,2,'institute')"/></td>
+                    <td><input type="text" onkeyup="addDetails('education',this.value,2,'stream')"/></td>
+                    <td><input type="text" onkeyup="addDetails('education',this.value,2,'percentage')"/></td>
+                </tr>
+            </tbody>
+        </table>
+        <label>Computer-literacy</label><br/>
+        <input type="text" onkeyup="addDetails('computer_literacy',this.value,0)"/><br/><br/>
+        <input type="text" onkeyup="addDetails('computer_literacy',this.value,1)"/><br/><br/>
+        <input type="text" onkeyup="addDetails('computer_literacy',this.value,2)"/><br/><br/>
+        <input type="text" onkeyup="addDetails('computer_literacy',this.value,3)"/><br/><br/>
+        <label>Project</label>
+        <table>
+            <thead>
+                <tr>
+                    <td>#</td>
+                    <td>Title</td>
+                    <td>Abstract</td>
+                    <td>Team Members</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><input type="text" onkeyup="addDetails('project',this.value,0,'title')"/></td>
+                    <td><input type="text" onkeyup="addDetails('project',this.value,0,'abstract')"/></td>
+                    <td><input type="text" onkeyup="addDetails('project',this.value,0,'team_members')"/></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><input type="text" onkeyup="addDetails('project',this.value,1,'title')"/></td>
+                    <td><input type="text" onkeyup="addDetails('project',this.value,1,'abstract')"/></td>
+                    <td><input type="text" onkeyup="addDetails('project',this.value,1,'team_members')"/></td>
+                </tr>
+            </tbody>
+        </table>
+        <label>Skills</label><br/>
+        <input type="text" onkeyup="addDetails('skills',this.value,0)"/><br/><br/>
+        <input type="text" onkeyup="addDetails('skills',this.value,1)"/><br/><br/>
+        <input type="text" onkeyup="addDetails('skills',this.value,2)"/><br/><br/>
+        <input type="text" onkeyup="addDetails('skills',this.value,3)"/><br/><br/>
+        </table>
+        <label>Interests</label><br/>
+        <input type="text" onkeyup="addDetails('interest',this.value,0)"/><br/><br/>
+        <input type="text" onkeyup="addDetails('interest',this.value,1)"/><br/><br/>
+        <input type="text" onkeyup="addDetails('interest',this.value,2)"/><br/><br/>
+        <input type="text" onkeyup="addDetails('interest',this.value,3)"/><br/><br/>
+        <label>personal_details</label><br/><br/>
+        <label>Father's Name</label>
+        <input type="text" onkeyup="addDetails('personal_details',this.value,'father_name')"/><br/><br/>
+        <label>Father_occupation</label>
+        <input type="text" onkeyup="addDetails('personal_details',this.value,'father_occupation')"/><br/><br/>
+        <label>Siblings</label>
+        <input type="text" onkeyup="addDetails('personal_details',this.value,'Siblings')"/><br/><br/>
+        <label>Gender</label>
+        <input type="text" onkeyup="addDetails('personal_details',this.value,'gender')"/><br/><br/>
+        <label>DOB</label>
+        <input type="text" onkeyup="addDetails('personal_details',this.value,'dob')"/><br/><br/>
+        <label>Marital Status</label>
+        <input type="text" onkeyup="addDetails('personal_details',this.value,'marital_status')"/><br/><br/>
+        <label>Gender</label>
+        <input type="text" onkeyup="addDetails('personal_details',this.value,'gender')"/><br/><br/>
+        <label>Nationality</label>
+        <input type="text" onkeyup="addDetails('personal_details',this.value,'nationality')"/><br/><br/>
+        <label>Declaration</label>
+        <textarea onkeyup="addDetails('personal_details',this.value,'declaration')"></textarea>
+        <input type="button" class="create_api" value="create_api"/>
+        <input type="button" class="get_api" value="get_api"/>
+    </form>
+    <div id="resume"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        let my_resume = {
+
+        }
+        function addDetails(key,value,index=null,indexkey=null){
+            let key_obj = ["education","project"]
+            let key_array = ["education","project","skills","interest","computer_literacy"]
+            if(index == null && indexkey == null){
+                my_resume[key] = value;
+            }
+            else{
+                if((!my_resume[key]) && key_array.includes(key)){
+                    my_resume[key] = []
+                }
+            }
+            if(key_obj.includes(key)){
+                if(!my_resume[key][index]){
+                    my_resume[key][index] = {}
+                }
+                my_resume[key][index][indexkey] = value
+            }
+            else{
+                my_resume[key][index] = value;
+            }
+            display()
+        }
+        function display(){
+            document.getElementById("resume").innerHTML = JSON.stringify(my_resume)
+        }
+        display()
+        $(document).ready(function(){
+            $(".create_api").click(function(){
+                $.ajax({
+                    type : "post",
+                    url : "http://karka.academy/api/action.php",
+                    data : {
+                        request : "create_resume",
+                        user:"nathan",
+                        resume:my_resume,
+
+                    },
+                    success : function(data){
+                        console.log(data);
+                    }
+                });
+            });
+            $(".get_api").click(function(){
+                $.ajax({
+                    type : "get",
+                    url : "http://karka.academy/api/action.php",
+                    data : {
+                        request : "get_user_resume",
+                        user:"nathan",
+                    },
+                    success : function(data){
+                        console.log(data);
+                    }
+                });
+            });
+        });
+        
+    </script>
+</body>
+</html>
