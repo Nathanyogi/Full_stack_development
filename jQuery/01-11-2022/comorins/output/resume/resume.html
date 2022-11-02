@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <title>resume</title>
 </head>
 <body>
@@ -103,7 +104,7 @@
         <label>Father_occupation</label>
         <input type="text" onkeyup="addDetails('personal_details',this.value,'father_occupation')"/><br/><br/>
         <label>Siblings</label>
-        <input type="text" onkeyup="addDetails('personal_details',this.value,'Siblings')"/><br/><br/>
+        <input type="text" onkeyup="addDetails('personal_details',this.value,'siblings')"/><br/><br/>
         <label>Gender</label>
         <input type="text" onkeyup="addDetails('personal_details',this.value,'gender')"/><br/><br/>
         <label>DOB</label>
@@ -117,9 +118,50 @@
         <label>Declaration</label>
         <textarea onkeyup="addDetails('personal_details',this.value,'declaration')"></textarea>
         <input type="button" class="create_api" value="create_api"/>
-        <input type="button" class="get_api" value="get_api"/>
+
+        <input type="button" class="view_api" value="view_api"/>
     </form>
-    <div id="resume"></div>
+    <table border="1px" width="50%">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th class="text-center">Name</th>
+                <th class="text-center">Role</th>
+                <th class="text-center">Email</th>
+                <th class="text-center">Action</th>
+            </tr>
+        </thead>
+        <tbody id="table_details"></tbody>
+    </table>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            heooljvvkh
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- <div id="resume"></div> -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         let my_resume = {
@@ -127,31 +169,36 @@
         }
         function addDetails(key,value,index=null,indexkey=null){
             let key_obj = ["education","project"]
-            let key_array = ["education","project","skills","interest","computer_literacy"]
-            if(index == null && indexkey == null){
-                my_resume[key] = value;
-            }
-            else{
-                if((!my_resume[key]) && key_array.includes(key)){
+            let key_array = ["skills","interest","computer_literacy"]
+            if(!my_resume[key]){
                     my_resume[key] = []
-                }
             }
-            if(key_obj.includes(key)){
-                if(!my_resume[key][index]){
+
+            if(index == null && indexkey==null){
+                my_resume[key] = value;
+            }else if(key_obj.includes(key)){
+                
+                if(! my_resume[key][index]){
                     my_resume[key][index] = {}
                 }
                 my_resume[key][index][indexkey] = value
+            }else if(key_array.includes(key)){
+                my_resume[key][index] = value
             }
             else{
-                my_resume[key][index] = value;
+                if( my_resume[key] != {}){
+                    my_resume[key] = {}
+                }
+                my_resume[key][index] = value
             }
-            display()
+            // display()
         }
-        function display(){
-            document.getElementById("resume").innerHTML = JSON.stringify(my_resume)
-        }
-        display()
+        // function display(){
+        //     document.getElementById("resume").innerHTML = JSON.stringify(my_resume)
+        // }
+        // display()
         $(document).ready(function(){
+            // create api
             $(".create_api").click(function(){
                 $.ajax({
                     type : "post",
@@ -162,21 +209,77 @@
                         resume:my_resume,
 
                     },
-                    success : function(data){
-                        console.log(data);
+                    success : function(full_details){
+                        let details = JSON.parse(full_details).data
+                        $("#table_details").html(``)
+                        for(let i=0;i<details.length;i++){
+                            let resume_data = JSON.parse(details[i].data)
+                            let table_details = "<tr><td>"+ (i+1) +"</td><td>"+ resume_data.name+"</td><td>"+resume_data.Role+"</td><td>"+resume_data.email+"</td><td><button id='delete_api' value="+details[i].id+">delete</button></td><td><button id='view_api' data-toggle='modal' data-target='#exampleModal' value="+details[i].id+">view</button></td>"
+                            
+                            $("#table_details").append(table_details)
+
+                                                
+                            
+                        }
+
                     }
                 });
             });
-            $(".get_api").click(function(){
+            // get api
+            $.ajax({
+                type : "get",
+                url : "http://karka.academy/api/action.php",
+                data : {
+                    request : "get_user_resume",
+                    user:"nathan",
+                },
+                success : function(full_details){
+                    let details = JSON.parse(full_details).data
+                    for(let i=0;i<details.length;i++){
+                        let resume_data = JSON.parse(details[i].data)
+                        let table_details = "<tr><td>"+ (i+1) +"</td><td>"+ resume_data.name+"</td><td>"+resume_data.Role+"</td><td>"+resume_data.email+"</td><td><button id='delete_api' value="+details[i].id+">delete</button></td><td><button id='view_api' data-toggle='modal' data-target='#exampleModal"+details[i].id+"' value="+details[i].id+">view</button></td>"
+                        
+                        $("#table_details").append(table_details)
+                    }
+                }
+            });
+            // delete api
+            $(document).on('click','#delete_api',function(){
+                let id_no = $(this).val()
                 $.ajax({
                     type : "get",
                     url : "http://karka.academy/api/action.php",
                     data : {
-                        request : "get_user_resume",
-                        user:"nathan",
+                        request : "delete_user_resume",
+                        user : "nathan",
+                        id : id_no
                     },
-                    success : function(data){
-                        console.log(data);
+                    success : function(full_details){
+                        let details = JSON.parse(full_details).data
+                        $("#table_details").html(``)
+                        for(let i=0;i<details.length;i++){
+                            let resume_data = JSON.parse(details[i].data)
+                            let table_details = "<tr><td>"+ (i+1) +"</td><td>"+ resume_data.name+"</td><td>"+resume_data.Role+"</td><td>"+resume_data.email+"</td><td><button id='delete_api' value="+details[i].id+">delete</button></td><td><button id='view_api' value="+details[i].id+">view</button></td>"
+                            
+                            $("#table_details").append(table_details)
+                        }
+                    }
+                });
+            });
+            $(document).on("click","#view_api",function(){
+                let view = $(this).val()
+                $.ajax({
+                    type : "get",
+                    url : "http://karka.academy/api/action.php",
+                    data : {
+                        request : "get_resume_by_id",
+                        user : "nathan",
+                        id : view,
+                        },
+                    success : function(detail){
+                        let data = JSON.parse(detail).data.data
+                        let original_data = JSON.parse(data)
+
                     }
                 });
             });
