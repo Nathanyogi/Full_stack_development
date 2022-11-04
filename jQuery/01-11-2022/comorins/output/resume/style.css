@@ -1,0 +1,11 @@
+body{
+    width:100%;
+}
+.resume{
+    width:95%;
+}
+h1{
+    text-align: center;
+    background-color: lawngreen;
+    border: 1px solid steelblue;
+}

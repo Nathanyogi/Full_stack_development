@@ -40,33 +40,34 @@
                 <tbody>
                   <tr>
                     <th scope="row">1</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td id="#clg_c"></td>
+                    <td id="#clg_s"></td>
+                    <td id="#clg_i"></td>
+                    <td id="#clg_y"></td>
+                    <td id="#clg_p"></td>
                   </tr>
                   <tr>
                     <th scope="row">2</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td id="hsc_c"></td>
+                    <td id="hsc_c"></td>
+                    <td id="hsc_c"></td>
+                    <td id="hsc_c"></td>
+                    <td id="hsc_c"></td>
                   </tr>
                   <tr>
                     <th scope="row">3</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td id="ssc_c"></td>
+                    <td id="ssc_s"></td>
+                    <td id="ssc_i"></td>
+                    <td id="ssc_y"></td>
+                    <td id="ssc_p"></td>
                   </tr>
                 </tbody>
               </table>
         </div>
         <h1>Computer-literacy</h1>
-        <ul id="conputer_literacy"></ul>
+        <ul id="computer_literacy">
+        </ul>
         <h1>Project</h1>
         <ul>
             <li>Type:<span id="type"></span></li>
@@ -75,13 +76,43 @@
             <li>Abstract:<span id="abstarct"></span></li>
         </ul>
         <h1>Skills</h1>
-        <ul id="skills"></ul>
+        <ul id="skills">
+        </ul>
         <h1>Interests</h1>
-        <ul id="interest"></ul>
+        <ul id="interest">
+        </ul>
         <h1>Declaration</h1>
         <div id="conclusion"></div>
         <h4>Date:<span id="date"></span></h4>
         <h4>Place:<span id="place"></span></h4>
     </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const id_no = urlParams.get('id');
+    $.ajax({
+      type : "get",
+      url : "http://karka.academy/api/action.php",
+      data : {
+          request : "get_resume_by_id",
+          user : "nathan",
+          id : id_no,
+          },
+      success : function(detail){
+
+        function get_arr(key){
+
+        }
+        let data = JSON.parse(detail).data.data
+        let original_data = JSON.parse(data)
+        $("#name").html(original_data.name)
+        $("#email").html(original_data.email)
+        $("#phone").html(original_data.phone)
+        $("#role").html(original_data.role)
+        $("#linked").html(original_data.linkedIn)
+
+      }
+      });
+  </script>
 </body>
-</html>
