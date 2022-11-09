@@ -161,13 +161,248 @@ let obj_check = function(a,b){
 }
 obj_check(obj1,obj2)*/
 
-// javascript code to filter the specified values form array,and return the original array without the filterd value
+// javascript code to filter the specified values form array,and return the original array without the filterd value ex-4
 
-let arr = ["nathan",1,"neelakandan",2,"viji",3,"muthukrishnan",4]
+/*let arr = ["nathan",1,"neelakandan",2,"viji",3,"muthukrishnan",4]
 let arr1 = arr.filter((a) => {
-    if(typeof(a) == "string"){
+    if(typeof(a) === "number"){
         return a
     }
-
 })
-console.log(arr1)
+arr = arr.filter(item => {
+    let original_arr = !arr1.includes(item)
+    return original_arr
+})
+console.log(arr)*/
+
+// program to check the value is null or undefind ex-5
+
+/*let a;
+let value = element => {
+    if(element === undefined){
+        return `value is undefined`
+    }
+    else if(element == undefined){ //null==undefind true   null===undefined  false
+        return `value is null`
+    }
+    else{
+        return `value is not undefined and null`
+    }
+}
+console.log(value(a))*/
+
+                                        //Part-3
+
+//loop and print the properties of the object ex-1
+
+/*let person = {
+    name:"nathan",
+    age:22,
+    sex:"male"
+}
+for(let prop in person){
+    console.log(`${prop}: ${person[prop]}`)
+}*/
+
+//console warning ex-3
+
+// console.warn("Please update your browser")
+
+// console error ex-4
+
+// console.error("Invalid Input")
+
+// console statement to print properties of element ex-5
+/*let p=['1,2,3,4']
+console.log(p) */
+
+// try catch statement ex-6
+
+/*let a =10;
+let b =0
+try{
+    console.log(c/b)
+}
+catch(error){
+    console.warn('error occur')
+    console.error(error)
+}
+finally{
+    console.log("finall will executes every time")
+}*/
+
+// switch statement to find which day ex-7
+
+/*let check_day = (day) =>{
+    let dayname;
+    switch(day){
+        case 0:
+            dayname ='sunday';
+            break;
+        case 1:
+            dayname ='monday';
+            break;
+        case 2:
+            dayname ='tuesday';
+            break;
+        case 3:
+            dayname ='wednesday';
+            break;
+        case 4:
+            dayname ='Thursday';
+            break;
+        case 5:
+            dayname ='friday';
+            break;
+        case 6:
+            dayname ='saturday';
+    }
+    return dayname
+}
+let today =new Date().getDay()
+console.log(check_day(today))*/
+
+// five diff ways to check the object is empty ex-8
+/*let person ={
+}
+// method 1
+let key = Object.keys(person)
+if(key.length == 0){
+    console.log("object is empty")
+}
+else{
+    console.log("object is not empty")
+}
+
+// method 2
+console.log(jQuery.isEmptyObject(person))
+
+// method 3
+console.log(JSON.stringify(person) === '{}')*/
+
+//four diff ways to find values in array ex-9
+
+/*let arr =[1,2,3,4,5]
+// method 1
+console.log(arr.includes(2))
+
+// method 2
+console.log(arr.indexOf(2))
+
+// mwthod 3
+console.log(arr.findIndex(findVlaue))
+
+
+// method 4
+function findVlaue(value){
+    if(value == 3){
+        return value
+    }
+}
+let state = false;
+let item;
+let value=arr.forEach((item) =>{
+    if(item==2){
+        state=true;
+    }   
+})
+
+if(state == true){
+    console.log(`value is in the array`)
+}*/
+
+                                        // part-4
+
+// create a function that takes a array as an argument and remove all duplicates ex-1
+
+let arr = [1,2,3,2,3]
+/*let remove_duplicate = (arr) =>{
+    let new_array = [... new Set(arr)]
+    console.log(new_array)
+}
+
+remove_duplicate(arr)*/
+
+// filter exercise ex-4
+
+/*arr = arr.filter(values =>values>1)
+console.log(arr) */
+
+                                        // part-5
+
+// concat num1 and num2 and clone it into num3 find max and min number ex-1
+
+/*let num1 =[1,2,3,4]
+let num2 =[5,6,7,8];
+
+let clone = [...num1,...num2]
+let num3 =[...clone]
+
+console.log(Math.min(...num3))
+console.log(Math.max(...num3))*/
+
+// sum the total of all fishermen ex-2
+
+let fishermen_details =[
+    {f_name:"nathan",score:140},
+    {f_name:"neelakandan",score:120},
+    {f_name:"muthukrishnan",score:80},
+    {f_name:"karthik",score:60},
+    {f_name:"sunil",score:-1},
+]
+/*let total =0;
+let i =0
+// find average
+let func = () =>{
+    fishermen_details.forEach((item) =>{
+        i++
+        total += item.score
+        return total,i
+    });
+    let average = total/i
+    console.log(average)
+}
+func()
+// print the name of the fishermen who takes the score above 100
+let names =fishermen_details.filter((item)=>{
+    if(item.score > 100){
+        return item
+    }
+})
+names.forEach((prop)=>console.log(prop.f_name)) */
+
+// regular expression to find the number in the string ex-3
+
+ /*let find_num = /\d+/g;
+ let str = "hello do know my age is 22 and my jercy name is nathan412200"
+ console.log(str.match(find_num))*/
+
+//  function that checks if scores are all positive numbers ex-4
+
+/*let positive_checker = function(){
+    let positive_arr=fishermen_details.map((item)=> item.score >= 0)
+    if(positive_arr.includes(false)){
+        console.log("scores include negative value")
+    }
+    else{
+        console.log("scores are possitive value")
+    }
+}
+positive_checker()*/
+
+// check the arguments are possitive or negative ex-5
+
+/*let arg_checker =function(a,b){
+    let result;
+    if(a >= 0 && b>=0){
+        result="both argivemnet are possitive"
+    }
+    else if((a<0 && b>=0) || (a>=0 && b<0)){
+        result="one of the argivement is negative"
+    }
+    else{
+        result="both argivement are negative"
+    }
+    return result
+}
+console.log(arg_checker(-1,-1))*/
